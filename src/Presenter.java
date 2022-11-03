@@ -7,9 +7,9 @@ public class Presenter {
     IModel m;
     IView v;
 
-    public Presenter(IModel m, IView v) throws IOException {
-        this.m = new newModel();
-        this.v = new ConsoleView();
+    public Presenter(IModel m, IView v)   {
+        this.m = m;
+        this.v = v;
     }
 
     public void button1Click() {

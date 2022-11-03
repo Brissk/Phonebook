@@ -42,10 +42,12 @@ public class MyCsv implements Storage {
     @Override
     public String serialize(ArrayList<Contact> contacts) {
         StringBuilder csv = new StringBuilder();
-        csv.append("id").append("\t").append("name\t").append("phonenumber").append(";");
+        csv.append("id ").append("name ").append("phonenumber").append(";");
+        System.out.println(csv);
 
         for (Contact c : contacts) {
-            csv.append(c.getId()).append("\t").append(c.getName()).append("\t").append(c.getPhoneNumber()).append(";");
+            csv.append(c.getId()).append("\t").append(c.getName()).append("\t").append(c.getPhoneNumber());
+            System.out.println(c);
         }
 
         return csv.toString();

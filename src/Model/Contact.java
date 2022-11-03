@@ -18,7 +18,7 @@ public class Contact {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(name).append("; ").append(phoneNumber);
+        sb.append(id).append(" ").append(name).append(" ").append(phoneNumber);
         return sb.toString();
     }
 

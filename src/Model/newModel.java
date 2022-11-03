@@ -1,4 +1,5 @@
 package Model;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -11,9 +12,12 @@ public class newModel implements IModel {
     Phonebook pb1;
     Storage st;
 
-    public newModel() throws IOException {
+    public newModel(String s) throws IOException {
         pb1 = new Phonebook(223);
-        st = new Json();
+        if (s == "json")
+            st = new Json();
+        else if (s == "csv")
+            st = new MyCsv();
     }
 
     @Override
